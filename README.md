@@ -55,8 +55,10 @@ from docling.document_converter import DocumentConverter, PdfFormatOption
 import os
 
 strUserID = os.getlogin()
-#  (change from my file structure):
-artifacts_path = "C:\\DataSci\\PythonWorkArea\\IBMDocling\\IBMDoclingVenv\\models"
+#  Note:  (change from my file structure)
+os.chdir("C:\\DataSci\\PythonWorkArea\\IBMDocling\\IBMDoclingVenv\\models")
+
+artifacts_path = "models"
 pipeline_options = PdfPipelineOptions(artifacts_path=artifacts_path)
 
 doc_converter = DocumentConverter(
@@ -65,8 +67,7 @@ doc_converter = DocumentConverter(
     }
 )
 
-#  Note:  Needs C:\ and path.  (change from my file structure):
-source = "C:\\DataSci\\PythonWorkArea\\IBMDocling\\IBMDoclingVenv\\2408.09869v5.pdf"
+source = "2408.09869v5.pdf"
 result = doc_converter.convert(source)
 print(result.document.export_to_markdown())
 ```
