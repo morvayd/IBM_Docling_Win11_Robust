@@ -14,7 +14,7 @@ venv\Scripts\python.exe -m pip install docling
 
 #  Download the docling models to use locally
 #  Note:  (change from my file structure)
-docling-tools models download --all -o "C:\DataSci\PythonWorkArea\IBMDocling\IBMDoclingVenv\models"
+docling-tools models download --all -o "models"
 
 #
 #  ---------- Optional ----------
