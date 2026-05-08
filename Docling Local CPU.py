@@ -27,8 +27,9 @@ from docling.datamodel.base_models import InputFormat
 from docling.datamodel.pipeline_options import RapidOcrOptions, PdfPipelineOptions
 from docling.document_converter import DocumentConverter, PdfFormatOption
 import os
+import getpass
 
-strUserID = os.getlogin()
+strUserID = getpass.getuser()
 #  Note:  (change from my file structure)
 os.chdir("C:\\DataSci\\PythonWorkArea\\IBMDocling\\IBMDoclingVenv\\models")
 
