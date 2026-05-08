@@ -31,7 +31,7 @@ import getpass
 
 strUserID = getpass.getuser()
 #  Note:  (change from my file structure)
-os.chdir("C:\\DataSci\\PythonWorkArea\\IBMDocling\\IBMDoclingVenv\\models")
+os.chdir("C:\\DataSci\\PythonWorkArea\\IBMDocling\\IBMDoclingVenv")
 
 artifacts_path = "models"
 pipeline_options = PdfPipelineOptions(artifacts_path=artifacts_path)
