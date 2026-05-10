@@ -51,8 +51,9 @@ strExtract = doc.export_to_markdown()
 print (strExtract)
 
 #
-#  ---------- Option 3 - Docling Local ----------
+#  ---------- Option 3 - Docling Local Chunks ----------
 #
+
 #  Disconnected from the internet.  
 from docling.datamodel.base_models import InputFormat
 from docling.datamodel.pipeline_options import RapidOcrOptions, PdfPipelineOptions
@@ -78,7 +79,11 @@ converterPDF = DocumentConverter (
         InputFormat.PDF: PdfFormatOption(pipeline_options=pipeline_options)
 })
 
-#  Setup local chunker -  Note:  (change from my file structure)
+#  Setup local chunker -  First Time Run 
+#  -  Will download the model 
+#  - Then can comment out and use local path for subsequent runs.
+#  - Better - copy folder "models--sentence-transformers--all-MiniLM-L6-v2"
+#  - From ~/.cache/huggingface/hub/ to the models folder in the venv.  
 '''
 tokenizer = HuggingFaceTokenizer(tokenizer=AutoTokenizer.from_pretrained("sentence-transformers/all-MiniLM-L6-v2"), max_tokens=512)
 '''
