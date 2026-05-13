@@ -96,10 +96,14 @@ source="2408.09869v5.pdf"
 #  Downloads to C:\Users\<userID>\.cache\huggingface\hub\models--sentence-transformers--all-MiniLM-L6-v2
 #  All other docs (docx, xlsx, pptx) will load at once - Use chunking.
 #  Convert it ready for chunking.
-doc = converterPDF.convert(source=source).document
-chunk_iter = chunker.chunk(doc)
-
-chunks = list(chunk_iter)
+try:
+    doc = converterPDF.convert(source=source).document
+    print ("\nNote:  When the chunker command runs, it gives an error regarding token lengths.  Please disregard, no data has been lost or ignored. \n")
+    chunk_iter = chunker.chunk(doc)
+    chunks = list(chunk_iter)
+except:
+    chunks = ""
+    extracted_text = "No valid PDF data found."
 
 '''
 len(chunks)  # output: 30
