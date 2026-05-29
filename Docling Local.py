@@ -304,7 +304,7 @@ except Exception as e:
 #
 #  ---------- Document Packages ----------
 #
-#  For MacOS - Utilize requiements.txt - do not overwrite
+#  For Win11 - Utilize requiements.txt - do not overwrite
 #  venv/bin/python3 -m pip freeze > requirements.txt
 
 #  Then can compare on a new machine -
